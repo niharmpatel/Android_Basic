@@ -2,7 +2,9 @@ package com.example.app;
 
 import  androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
@@ -10,7 +12,6 @@ import android.widget.ListView;
 import java.util.ArrayList;
 
 import static com.example.app.R.id.btn1;
-import static com.example.app.R.id.list_item;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -31,6 +32,16 @@ public class MainActivity extends AppCompatActivity {
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, myFriends);
 
         listView.setAdapter(arrayAdapter);
+        Button btn = findViewById(btn1);
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+
+            public void onClick(View v) {
+
+                startActivity(new Intent(MainActivity.this, TableActivity.class));
+
+            }
+        });
 
     }
 }
