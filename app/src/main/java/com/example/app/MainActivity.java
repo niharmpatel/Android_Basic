@@ -39,11 +39,15 @@ public class MainActivity extends AppCompatActivity {
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
-            int viewId = 0;
+
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position  , long id) {
-                if (position  == viewId)
-                startActivity(new Intent(MainActivity.this, TableActivity.class));
+                if (position  == 0) {
+                    startActivity(new Intent(MainActivity.this, TableActivity.class));
+                } else if (position == 1){
+                    startActivity(new Intent(MainActivity.this, Timer.class));
+
+                }
 
 
             }
