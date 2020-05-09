@@ -14,12 +14,13 @@ public class Timer extends AppCompatActivity {
     boolean counterIsActive = false;
     CountDownTimer countDownTimer;
     public void buttonClicked (View view) {
-        counterIsActive = true;
-        timerSeekBar.setEnabled(false);
-        startButton.setText("STOP");
-        if (counterIsActive = false) {
+
+        if (counterIsActive ) {
             resetTimer();
         } else {
+            counterIsActive = true;
+            timerSeekBar.setEnabled(false);
+            startButton.setText("STOP");
             countDownTimer= new CountDownTimer(timerSeekBar.getProgress() * 1000, 1000) {
                 @Override
                 public void onTick(long millisUntilFinished) {

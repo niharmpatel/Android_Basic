@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#8A1F857B"
+    android:background="#8A323232"
     tools:context=".TableActivity">
 
     <SeekBar
@@ -23,7 +23,7 @@
         android:id="@+id/tableListView"
         android:layout_width="409dp"
         android:layout_height="702dp"
-        android:background="#974CAF50"
+        android:background="#7E606060"
         android:cacheColorHint="#9A2E2828"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

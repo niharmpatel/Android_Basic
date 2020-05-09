@@ -1,4 +1,12 @@
 <resources>
     <string name="app_name">App</string>
     <string name="table">Table</string>
+    <string name="title_activity_brain_trainer">Brain_trainer</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="_30">30</string>
+    <string name="_23_2">23+2</string>
+    <string name="_0_0">0/0</string>
+    <string name="start">Start</string>
 </resources>

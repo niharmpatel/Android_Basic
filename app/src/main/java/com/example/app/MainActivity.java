@@ -26,8 +26,8 @@ public class MainActivity extends AppCompatActivity {
         final ListView listView = findViewById(R.id.listView);
         final ArrayList<String> myFriends = new ArrayList<String>();
         myFriends.add("Table");
-        myFriends.add("2");
-        myFriends.add("3");
+        myFriends.add("TImer");
+        myFriends.add("Brain Trainer");
         myFriends.add("4");
         myFriends.add("5");
 
@@ -46,7 +46,8 @@ public class MainActivity extends AppCompatActivity {
                     startActivity(new Intent(MainActivity.this, TableActivity.class));
                 } else if (position == 1){
                     startActivity(new Intent(MainActivity.this, Timer.class));
-
+                }else if (position == 2){
+                    startActivity(new Intent(MainActivity.this, BrainTrainer.class));
                 }
 
 
