@@ -6,11 +6,14 @@ import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.view.View;
 import android.widget.Button;
+import android.widget.GridLayout;
 import android.widget.TextView;
 
 import java.time.Instant;
 import java.util.ArrayList;
 import java.util.Random;
+
+import static com.example.app.R.id.gridLayout;
 
 public class BrainTrainer extends AppCompatActivity {
 
@@ -29,6 +32,7 @@ public class BrainTrainer extends AppCompatActivity {
     int score = 0;
     int numOfQuestion = 0;
     CountDownTimer countDownTimer;
+
 
     public void  chooseAnswer (View view){
         if( Integer.toString(arrayIndex).equals(view.getTag().toString())){
@@ -69,6 +73,7 @@ public class BrainTrainer extends AppCompatActivity {
         button4.setText(Integer.toString(answers.get(3)));
     }
 
+
     public void  playAgain (View view){
         score = 0;
         numOfQuestion = 0;
@@ -76,6 +81,10 @@ public class BrainTrainer extends AppCompatActivity {
         scoreTextView.setText(Integer.toString(score) + "/" + Integer.toString(numOfQuestion));
         newQuestion();
         playAgainButton.setVisibility(View.INVISIBLE);
+        button1.setClickable(true);
+        button2.setClickable(true);
+        button3.setClickable(true);
+        button4.setClickable(true);
         countDownTimer = new CountDownTimer(30100, 1000) {
             @Override
             public void onTick(long millisUntilFinished) {
@@ -86,6 +95,10 @@ public class BrainTrainer extends AppCompatActivity {
             public void onFinish() {
                 playAgainButton.setVisibility(View.VISIBLE);
                 resultTextView.setText("Done");
+                button1.setClickable(false);
+                button2.setClickable(false);
+                button3.setClickable(false);
+                button4.setClickable(false);
             }
         }.start();
 
