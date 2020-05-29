@@ -28,8 +28,6 @@ public class MainActivity extends AppCompatActivity {
         myFriends.add("Table");
         myFriends.add("TImer");
         myFriends.add("Brain Trainer");
-        myFriends.add("4");
-        myFriends.add("5");
 
         final ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, myFriends);
 
